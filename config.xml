@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    id        = "kmrs.merchant.app"
+    version   = "1.0.6">
+    <name>Karenderia Order Taking App</name>
+    <description>
+        Karenderia Order Taking App
+    </description>
+    <author email="basti@codemywebapps.com" href="http://cordova.io">
+        codemywebapps.com
+    </author>
+    <icon src="icon.png" />           
+    <content src="index.html" />
+        <preference name="phonegap-version" value="cli-6.5.0" />       
+	<preference name="orientation" value="portrait" />
+	<preference name="android-build-tool" value="gradle" />	
+		
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.1" />
+    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3" />
+    <gap:plugin name="cordova-plugin-device" source="npm" spec="1.1.4" />		
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.6.1" />		
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" spec="4.0.1" />	
+	<gap:plugin name="cordova-plugin-geolocation" source="npm" spec="2.4.1"/>
+	<gap:plugin name="cordova-plugin-network-information" source="npm" spec="1.3.1" />
+
+	<gap:splash src="splash.png" />
+	<preference name="AutoHideSplashScreen" value="false" />  	
+    <preference name="SplashScreenDelay" value="10000" />  
+    
+    <gap:plugin name="cordova-plugin-googlemaps"  source="npm"  spec="1.3.9">
+	   <param name="API_KEY_FOR_ANDROID" value="AIzaSyATp_CgHp7QAaWtU61clqGsdWRqL8Ld630" />
+	   <param name="API_KEY_FOR_IOS" value="XXX" />
+	</gap:plugin>	
+	
+	<gap:plugin name="cordova-plugin-media" source="npm" spec="2.4.1" />
+	<gap:plugin name="cordova-plugin-x-toast" source="npm" spec="2.5.2" />	
+	<gap:plugin name="cordova-plugin-buildinfo" source="npm" spec="1.1.0" />	
+	
+    <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
+    
+    <gap:config-file platform="android" parent="/manifest">
+        <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar" >            
+        </application>
+    </gap:config-file>    
+    
+</widget>

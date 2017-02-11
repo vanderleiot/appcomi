@@ -1,2 +1,1 @@
-# appcomi
-app adm
+# Karenderia-Order-Taking-App
